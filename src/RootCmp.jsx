@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-import { MenuSidebar } from './cmps/MenuSidebar'
 import { AnalyticsDetails } from './pages/AnalyticsDetails'
 import { AppIndex } from './pages/AppIndex'
 import { ChatDetails } from './pages/ChatDetails'
@@ -9,17 +8,14 @@ import { DataManagement } from './pages/DataManagement'
 export function App() {
   return (
     <>
-      
-
-
-        <Routes>
-          <Route path="/" element={<AppIndex />}>
-            <Route path="/chat" element={<ChatDetails />} />
-            <Route path="/analytics" element={<AnalyticsDetails />} />
-            <Route path="/prompts" element={<PromptManagement />} />
-            <Route path="/data" element={<DataManagement />} />
-          </Route>
-        </Routes>
+      <Routes>
+        <Route path="/" element={<AppIndex />}>
+          <Route path="/chat" element={<ChatDetails />} />
+          <Route path="/analytics" element={<AnalyticsDetails />} />
+          <Route path="/prompts" element={<PromptManagement />} />
+          <Route path="/data" element={<DataManagement />} />
+        </Route>
+      </Routes>
     </>
   )
 }
