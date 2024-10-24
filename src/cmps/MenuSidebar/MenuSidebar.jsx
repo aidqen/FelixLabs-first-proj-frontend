@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Navigation } from './Navigation'
-import { ToggleSidebar } from './ToggleSidebar'
+import { ToggleSidebar } from '../../svgs/ToggleSidebar'
 import { ProfilePreview } from './ProfilePreview'
 
 export function MenuSidebar({isOpen, setIsOpen}) {
@@ -13,7 +13,7 @@ export function MenuSidebar({isOpen, setIsOpen}) {
   return (
     <>
       <aside
-        className={`flex flex-col justify-between z-40 bg-darkSidebar h-screen pt-5 border-r transition-all border-x-gray-700 col-start-1 col-end-1`}
+        className={`flex flex-col justify-between z-40 bg-darkSidebar h-screen pt-5 border-r transition-all border-x-[#292929] col-start-1 col-end-1`}
       >
         <div>
           <ToggleSidebar onToggle={toggleSidebar} />
