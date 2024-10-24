@@ -15,7 +15,7 @@ export function Navigation({ isOpen }) {
 
   return (
     <nav className="h-full px-3 pb-4 overflow-y-auto ">
-      <ul className={`space-y-2 font-medium ${isOpen ? 'open' : 'close'}`}>
+      <ul className={`space-y-2 font-medium overflow-hidden ${isOpen ? 'open' : 'close'}`}>
         {navigationLinks.map(link => {
             return (
                 <li key={link.label}>
