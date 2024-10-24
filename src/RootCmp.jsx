@@ -9,8 +9,8 @@ import { DataManagement } from './pages/DataManagement'
 export function App() {
   return (
     <>
-      <div className="app h-screen w-screen">
-        <MenuSidebar />
+      
+
 
         <Routes>
           <Route path="/" element={<AppIndex />}>
@@ -20,7 +20,6 @@ export function App() {
             <Route path="/data" element={<DataManagement />} />
           </Route>
         </Routes>
-      </div>
     </>
   )
 }

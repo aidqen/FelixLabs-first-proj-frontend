@@ -4,10 +4,8 @@ import { Navigation } from './Navigation'
 import { ToggleSidebar } from './ToggleSidebar'
 import { ProfilePreview } from './ProfilePreview'
 
-export function MenuSidebar({}) {
-  const [isOpen, setIsOpen] = useState(false)
-  console.log('isOpen:', isOpen)
-  
+export function MenuSidebar({isOpen, setIsOpen}) {
+
   function toggleSidebar(){
     setIsOpen(!isOpen)
   }
@@ -15,9 +13,7 @@ export function MenuSidebar({}) {
   return (
     <>
       <aside
-        className={`flex flex-col justify-between fixed top-0 left-0 z-40 bg-darkSidebar h-screen pt-5 border-r transition-all border-x-gray-700  ${
-          isOpen ? 'w-64' : 'w-16'
-        }`}
+        className={`flex flex-col justify-between z-40 bg-darkSidebar h-screen pt-5 border-r transition-all border-x-gray-700 col-start-1 col-end-1`}
       >
         <div>
           <ToggleSidebar onToggle={toggleSidebar} />
