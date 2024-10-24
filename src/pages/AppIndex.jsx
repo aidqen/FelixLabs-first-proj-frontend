@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router'
-import { MenuSidebar } from '../cmps/MenuSidebar'
+import { MenuSidebar } from '../cmps/MenuSidebar/MenuSidebar'
 import { useState } from 'react'
 
 export function AppIndex() {
@@ -11,7 +11,7 @@ export function AppIndex() {
       } transition-all`}
     >
       <MenuSidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className={`main-section  w-full h-full col-start-2`}>
+      <div className={`main-section w-full h-full col-start-2 bg-[#1d1d1d]`}>
         <Outlet />
       </div>
     </div>
