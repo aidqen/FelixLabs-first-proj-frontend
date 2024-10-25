@@ -10,16 +10,36 @@
 
 
 .sidebar-link.active {
-  background-color: rgb(31, 31, 31);
+  /* background-color: rgb(31, 31, 31); */
 }
 
 ul.close .sidebar-link {
-  width: 2.7em;
+  width: 3em;
 }
 
 
 .sidebar-link-admin {
   @apply inline-flex items-center justify-center px-2 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300;
+}
+
+body {
+  --sb-track-color: #232E33;
+  --sb-thumb-color: #bbbbbb;
+  --sb-size: 8px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
 }
 
 :root {

@@ -109,9 +109,9 @@ const chatData = [
   }
 
   return (
-    <div className="h-full w-full grid grid-cols-[1fr,20em]">
+    <div className="h-full w-full grid grid-cols-[18.75em,1fr] ">
       <SettingsSidebar />
-      <main className="h-screen w-full flex flex-col justify-between col-start-1 col-end-1 row-start-1 row-end-2 custom-scrollbar">
+      <main className="h-screen w-full flex flex-col justify-between col-start-2 col-end-2 row-start-1 row-end-2 custom-scrollbar">
           <MessageList chatData={chatData}/>
         <div className="footer h-auto p-4 flex justify-center items-start">
           <UserInput

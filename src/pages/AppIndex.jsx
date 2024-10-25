@@ -7,11 +7,11 @@ export function AppIndex() {
   return (
     <div
       className={`app h-screen w-screen grid ${
-        isOpen ? 'grid-cols-[16rem,1fr]' : 'grid-cols-[4rem,1fr]'
+        isOpen ? 'grid-cols-[14rem,1fr]' : 'grid-cols-[5rem,1fr]'
       } transition-all`}
     >
       <MenuSidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className={`main-section w-full h-full col-start-2 bg-[#1d1d1d]`}>
+      <div className={`main-section w-full h-full col-start-2 bg-mainBg`}>
         <Outlet />
       </div>
     </div>

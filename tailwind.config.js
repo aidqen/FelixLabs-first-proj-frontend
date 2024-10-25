@@ -7,9 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        darkSidebar: 'rgb(19,19,22)',
+        mainBg: '#F5F6FA',
+        darkSidebar: '#171717',
         hoverInSidebar: 'rgb(25,25,25)',
       },
+      sizes: {
+        msgWidth: 'calc(auto - 10em)'
+      }
     },
   },
   plugins: [],
