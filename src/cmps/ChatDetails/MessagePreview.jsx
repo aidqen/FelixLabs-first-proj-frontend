@@ -7,27 +7,28 @@ export function MessagePreview({message}) {
     
   console.log('message:', message)
   return (
-    <div className="flex flex-row items-start gap-2.5" onMouseOver={() => setOnHover(true)} onMouseLeave={() => setOnHover(false)}>
+    <div className={`flex flex-row items-start justify-start ${owner !== 'bot' ? 'flex-row-reverse ' :'flex-row'} gap-2.5`} onMouseOver={() => setOnHover(true)} onMouseLeave={() => setOnHover(false)}>
       <img
-        className="w-8 h-8 rounded-full"
+        className="mt-1 w-8 h-8 rounded-full"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/434px-Unknown_person.jpg"
         alt="Jese image"
       />
-      <div className="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+      <div className={`flex flex-col w-max max-w-[800px] leading-1.5  border-gray-200 ${owner === 'user' ? 'bg-[#2F2F2F] p-4' : 'bg-transparent'}
+       rounded-e-xl rounded-es-xl dark:bg-gray-700`}>
         {/* <div className="flex items-center space-x-2 rtl:space-x-reverse"> */}
-          <span className="text-sm font-semibold text-gray-900 dark:text-white">
+          {owner === 'user' && <span className="text-sm font-semibold text-gray-900 text-white">
             {owner}
-          </span>
+          </span>}
           {/* <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
             11:46
           </span> */}
         {/* </div> */}
-        <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">
+        <p className="text-sm font-normal py-2.5 text-gray-900 text-white">
           {text}
         </p>
       </div>
       {onHover && <button
-        className="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600"
+        className="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-transparent rounded-lg focus:ring-4 focus:outline-none dark:text-white "
         type="button"
       >
         <svg

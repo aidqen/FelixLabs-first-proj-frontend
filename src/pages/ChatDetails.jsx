@@ -73,7 +73,7 @@ const chatData = [
   },
   {
     id: 12,
-    text: "Here’s a simple JavaScript function for adding two numbers:\n```js\nfunction add(a, b) {\n  return a + b;\n}\n```",
+    text: "Here’s a simple JavaScript function for adding two numbers:\n```js\nfunction add(a, b) {\n  return a + b;\n}\n``` Exactly! It’s all about identifying patterns in data, which allows the machine to make predictions or decisions based on the data it has processed Exactly! It’s all about identifying patterns in data, which allows the machine to make predictions or decisions based on the data it has processed.",
     owner: "bot",
   },
   {
