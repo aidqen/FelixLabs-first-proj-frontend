@@ -32,8 +32,8 @@ export function SettingsSidebar() {
   ]
 
   return (
-    <div className="settings-sidebar col-start-1 col-end-1 bg-[#FFFFFF] border-x-[#E5E5E5] p-6 border-r-[0.3px] border-[#E5E5E5] shadow-[4px_2px_41.4px_rgba(0,0,0,0.04)]">
-      <div className="flex flex-row items-center justify-between light:text-black text-black h-[2.125em]">
+    <div className="settings-sidebar col-start-1 row-start-1 row-end-1 h-screen bg-[#FFFFFF] border-x-[#E5E5E5] px-6 border-r-[0.3px] border-[#E5E5E5] shadow-[4px_2px_41.4px_rgba(0,0,0,0.04)]">
+      <div className="flex flex-row items-center justify-between light:text-black text-black h-[4.375em]">
         <h2 className="text-[24px]">Chats</h2>
         <RxMagnifyingGlass className="h-[34px] w-[34px]" />
       </div>

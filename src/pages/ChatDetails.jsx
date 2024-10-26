@@ -5,6 +5,7 @@ import { FiArrowUp, FiMic } from 'react-icons/fi'
 import { UserInput } from '../cmps/ChatDetails/UserInput'
 import { SettingsSidebar } from '../cmps/ChatDetails/SettingsSidebar'
 import { MessageList } from '../cmps/ChatDetails/MessageList'
+import { ChatHeader } from '../cmps/ChatDetails/ChatHeader'
 
 export function ChatDetails() {
   const params = useParams()
@@ -109,9 +110,10 @@ const chatData = [
   }
 
   return (
-    <div className="h-full w-full grid grid-cols-[18.75em,1fr] ">
+    <div className="h-full w-full grid grid-cols-[18.75em,1fr] grid-rows-[4.375em,1fr]">
+      <ChatHeader />
       <SettingsSidebar />
-      <main className="h-screen w-full flex flex-col justify-between col-start-2 col-end-2 row-start-1 row-end-2 custom-scrollbar">
+      <main className="h-[calc(100vh-5em)] w-full flex flex-col justify-between col-start-2  row-start-2 custom-scrollbar">
           <MessageList chatData={chatData}/>
         <div className="footer h-auto p-4 flex justify-center items-start">
           <UserInput
