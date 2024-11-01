@@ -10,7 +10,7 @@ export function App() {
     <>
       <Routes>
         <Route path="/" element={<AppIndex />}>
-          <Route path="/chat" element={<ChatDetails />} />
+          <Route path="/chat/:chatId" element={<ChatDetails />} />
           <Route path="/analytics" element={<AnalyticsDetails />} />
           <Route path="/prompts" element={<PromptManagement />} />
           <Route path="/data" element={<DataManagement />} />

@@ -1,19 +1,17 @@
 import { useEffect, useRef, useState } from 'react'
 import { useParams } from 'react-router'
-import { Link } from '../svgs/Link'
-import { FiArrowUp, FiMic } from 'react-icons/fi'
 import { UserInput } from '../cmps/ChatDetails/UserInput'
-import { SettingsSidebar } from '../cmps/ChatDetails/SettingsSidebar'
+import { ChatHistorySidebar } from '../cmps/ChatDetails/ChatHistorySidebar'
 import { MessageList } from '../cmps/ChatDetails/MessageList'
 import { ChatHeader } from '../cmps/ChatDetails/ChatHeader'
 
 export function ChatDetails() {
   const params = useParams()
-  const [userInput, setUserInput] = useState()
-  const textareaRef = useRef(null)
-// build a chat history array, each message should have an id, message and sender
-
-
+  const [chats, setChats] = useState(null);
+  
+useEffect(() => {
+  setChats(chatData)
+}, [])
 
 
 const chatData = [
@@ -89,37 +87,18 @@ const chatData = [
   }
 ];
 
-  function handleChange({ target }) {
-    setUserInput(target.value)
 
-    adjustHeight()
-  }
-
-  const adjustHeight = () => {
-    const textarea = textareaRef.current
-
-    textarea.style.height = 'auto'
-    textarea.style.height = `${textarea.scrollHeight}px`
-
-    const textLines = textarea.value.split('\n')
-
-    let totalLines = textLines.length
-    console.log('totalLines:', totalLines)
-
-    if (totalLines === 1) textarea.style.height = '74px'
-  }
 
   return (
     <div className="h-full w-full grid grid-cols-[18.75em,1fr] grid-rows-[4.375em,1fr]">
       <ChatHeader />
-      <SettingsSidebar />
+      <ChatHistorySidebar />
       <main className="h-[calc(100vh-5em)] w-full flex flex-col justify-between col-start-2  row-start-2 custom-scrollbar">
-          <MessageList chatData={chatData}/>
+          <MessageList chats={chats}/>
         <div className="footer h-auto p-4 flex justify-center items-start">
           <UserInput
-            userInput={userInput}
-            handleChange={handleChange}
-            textareaRef={textareaRef}
+            chats={chats}
+            setChats={setChats}
           />
         </div>
       </main>

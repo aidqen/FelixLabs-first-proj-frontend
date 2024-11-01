@@ -1,8 +1,8 @@
 import { BsPinAngle, BsPlusLg } from 'react-icons/bs'
-import { GoHistory } from 'react-icons/go'
 import { RxMagnifyingGlass } from 'react-icons/rx'
+import { ChatPreview } from './ChatPreview'
 
-export function SettingsSidebar() {
+export function ChatHistorySidebar() {
   const chatHistory = [
     {
       id: 1,
@@ -37,26 +37,19 @@ export function SettingsSidebar() {
         <h2 className="text-[24px]">Chats</h2>
         <RxMagnifyingGlass className="h-[34px] w-[34px]" />
       </div>
-      <button className="gap-2 flex flex-row text-black items-center justify-center w-full mt-5 mb-8 py-2 rounded-[15px] shadow-[2px_4px_15px_rgba(0,0,0,0.09),_-2px_2px_15px_rgba(0,0,0,0.05)]">
+      <button className="gap-2 flex flex-row text-black items-center justify-center w-full mt-5 mb-8 py-2 rounded-[15px] shadow-[2px_4px_15px_rgba(0,0,0,0.09),_-2px_2px_15px_rgba(0,0,0,0.05)] button-hover">
         <BsPlusLg />
         <h3>New Chat</h3>
       </button>
 
-      <div className="flex flex-row items-center gap-2 text-[#535353] text-[1em]">
+      <div className="flex flex-row items-center gap-2 text-[#535353] text-[1em] pb-2">
         <BsPinAngle className="h-[19.5px] w-[19.5px]" />
         <h4 className="font-normal">Pinned Conversations</h4>
       </div>
 
-      <ul className="chat-history border-gray-700  col-start-2 col-end-2">
+      <ul className="chat-history col-start-2 col-end-2 border-b border-gray-300">
         {chatHistory.map((chat) => (
-          <li
-            key={chat.id}
-            className={` ${chat.id === '1' ? 'bg-[#FAFAFA]' : ''}
-            flex flex-col items-start py-[10px] px-[20px] cursor-pointer rounded-lg text-black text-[0.8rem] h-[5.812em] gap-[5px] w-full transition-all overflow-hidden whitespace-nowrap text-ellipsis`}
-          >
-            <h3 className="text-[1.1em] font-semibold">{chat.title}</h3>
-            <p className="text-[1em]">{chat.text}</p>
-          </li>
+          <ChatPreview key={chat.id} chat={chat} />
         ))}
       </ul>
     </div>

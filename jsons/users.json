@@ -1,0 +1,24 @@
+[
+    {
+        "_id": "ObjectId(412513562365)",
+        "username": "aidqen",
+        "fullname": "Idan Markin",
+        "password": "fsaggawrwa%F%@A%^AS",
+        "email":"idanmarkin@gmail.com",
+        "phone": "054-1234567",
+        "imgUrl": "f9tfgjawoitjao/aws",
+        "accountType": "admin/premium/free",
+        "chats": [
+            {
+                "_id": "c101",
+                "title": "Hey",
+                "description": "Im good how are you?"
+            },
+            {
+                "_id": "c102",
+                "title": "Hey",
+                "description": "Im good how are you?"
+            }
+        ]
+    }
+]

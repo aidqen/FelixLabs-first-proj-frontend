@@ -1,0 +1,31 @@
+[
+    {
+        "_id": "c101",
+        "title": "Hey",
+        "introMsg": "Im good how are you?",
+        "user": {
+            "id": 241241,
+            "username": "aidqen",
+            "imgUrl": "ffasfafsa"
+        },
+        "messages": [
+            {
+                "id": 542145125,
+                "timestamp": 5421412,
+                "type": "text",
+                "text": "Hey",
+                "userType": "user/bot"
+            },
+            {
+                "id": 542145125,
+                "timestamp": 5421412,
+                "type": "image",
+                "image": {
+                    "caption": "Check this out",
+                    "url": "https://www.google.com"
+                },
+                "userType": "user/bot"
+            }
+        ]
+    }
+]

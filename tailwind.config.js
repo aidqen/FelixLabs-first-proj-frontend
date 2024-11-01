@@ -12,7 +12,8 @@ export default {
         hoverInSidebar: 'rgb(25,25,25)',
       },
       sizes: {
-        msgWidth: 'calc(auto - 10em)'
+        msgWidth: 'calc(auto - 10em)',
+        chatHeight: 'calc(100vh - 5em)'
       }
     },
   },
